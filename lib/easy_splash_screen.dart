@@ -21,6 +21,9 @@ class EasySplashScreen extends StatefulWidget {
   /// Main image mainly used for logos and like that
   final Image logo;
 
+  /// Loader
+  final Widget loader;
+  
   /// Loader color
   final Color loaderColor;
 
@@ -62,6 +65,7 @@ class EasySplashScreen extends StatefulWidget {
     this.backgroundImage,
     this.gradientBackground,
     this.showLoader = true,
+    this.loader
   });
 
   @override
@@ -145,11 +149,7 @@ class _EasySplashScreenState extends State<EasySplashScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       widget.showLoader
-                          ? CircularProgressIndicator(
-                              valueColor: AlwaysStoppedAnimation<Color?>(
-                                widget.loaderColor,
-                              ),
-                            )
+                          ? loader
                           : Container(),
                       if (widget.loadingText.data!.isNotEmpty)
                         Padding(
