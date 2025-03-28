@@ -149,7 +149,7 @@ class _EasySplashScreenState extends State<EasySplashScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       widget.showLoader
-                          ? loader
+                          ? widget.loader
                           : Container(),
                       if (widget.loadingText.data!.isNotEmpty)
                         Padding(
