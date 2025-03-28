@@ -65,7 +65,7 @@ class EasySplashScreen extends StatefulWidget {
     this.backgroundImage,
     this.gradientBackground,
     this.showLoader = true,
-    this.loader
+    required this.loader
   });
 
   @override
